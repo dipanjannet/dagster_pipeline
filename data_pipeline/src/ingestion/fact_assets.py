@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 @dg.asset(
     compute_kind="Python",
-    group_name="fact_ingeation",
+    group_name="fact_ingestion",
 )
 def generate_events_data():
     num_rows = 60

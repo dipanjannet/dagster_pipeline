@@ -3,13 +3,11 @@ import datetime as datetime
 import dagster as dg
 
 
-dg.asset(
+@dg.asset(
     compute_kind="Pandas",
-    group_name="dim_ingestiion"
+    group_name="dimension_ingestion",
 )
-def generate_asset_data() -> pd.DataFrame:
-    """Create a dictionary with the data"""
-    
+def generate_asset_data():
     data = [
         {'asset_id': 1, 'asset_name': 'Oil & Gas Exploration & Production', 'asset_type': 'Type 1', 'created_on': datetime.datetime.now()},
         {'asset_id': 2, 'asset_name': 'Automobile Manufacturing', 'asset_type': 'Type 2', 'created_on': datetime.datetime.now()},
@@ -25,6 +23,6 @@ def generate_asset_data() -> pd.DataFrame:
 
     # Create the DataFrame
     df = pd.DataFrame(data)
-    df.to_csv('data/asset.csv", mode='a', index=False)
+    df.to_csv('data/asset.csv', mode='a', index=False)
 
     return "Data loaded successfully into a CSV file"
