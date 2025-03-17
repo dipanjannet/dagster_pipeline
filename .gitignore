@@ -170,5 +170,12 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# Temp stuff:
+# .tmp_dagster_home_*
+
+
 # PyPI configuration file
 .pypirc
+
+# Virtual Environment Folder
+dagster_tutorial
