@@ -33,7 +33,7 @@ def get_max_timestamp_from_sqlite_table(db_path: str, table: str, column: str) -
     """
     
     conn = sqlite3.connect(db_path)
-    query = "SELECT MAX({column}) FROM {table}"
+    query = f"SELECT MAX('{column}') FROM '{table}'"
     
     try:
         result = pd.read_sql_query(query, conn)
