@@ -41,8 +41,6 @@ A curation in a merged Layer between Fact and Dimension Data whcih can be furthe
 - Activate the Virtual Environment : .\Activate.ps1
 - Install necessary deedency : pip install dagster dagster-webserver pandas pytest
 
-# How to Run this Project | Post ACtivating Venv
+# How to Run this Project | Post Activating Venv
 - Navigate to : cd .\data_pipeline\
 - Run : dagster dev
-
-# In Progress - Due to time constraint I could not add the Architecture Diagram
