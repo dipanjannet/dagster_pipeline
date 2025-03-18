@@ -6,6 +6,9 @@ A Modern ETL data Pipeline using
 - PyTest
 - Automate Lieage and Metadata Tracking
 
+# Architecture
+[![Architecture Diagram](architecture_diagram.png)](architecture_diagram.png)
+
 # Project Overview
 This project demonstrates a modern ETL (Extract, Transform, Load) data pipeline using Dagster, Python, and Pandas. The pipeline is designed to efficiently process and transform data, making it ready for analysis and reporting. Dagster is used as the orchestration tool to manage the workflow, ensuring that each step of the pipeline is executed in the correct order and handling any dependencies between tasks. Python and Pandas are utilized for data manipulation and transformation, providing powerful tools for cleaning, aggregating, and analyzing data. This project serves as a template for building robust and scalable data pipelines.
 
@@ -38,8 +41,6 @@ A curation in a merged Layer between Fact and Dimension Data whcih can be furthe
 - Activate the Virtual Environment : .\Activate.ps1
 - Install necessary deedency : pip install dagster dagster-webserver pandas pytest
 
-# How to Run this Project | Post ACtivating Venv
+# How to Run this Project | Post Activating Venv
 - Navigate to : cd .\data_pipeline\
 - Run : dagster dev
-
-# In Progress - Due to time constraint I could not add the Architecture Diagram
