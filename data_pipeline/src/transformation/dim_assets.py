@@ -1,6 +1,6 @@
-import sqlite3
 import pandas as pd
 import dagster as dg
+from sqlalchemy import create_engine
 from src.ingestion.dim_assets import generate_asset_data
 
 
@@ -10,16 +10,19 @@ from src.ingestion.dim_assets import generate_asset_data
     deps=[generate_asset_data]
 )
 def transform_asset_data():
-    
-    database = 'data/events.db'
+    # PostgreSQL connection parameters
+    engine = create_engine('postgresql://postgres:postgres@db:5432/mydatabase')
     table_name = 'pz_assets'
     
     df = pd.read_csv("data/asset.csv")
     
-    conn = sqlite3.connect(database)
-    # Save the dataframe to a SQL table
-    df.to_sql(table_name, conn, if_exists='append', index=False)
-
-    # Close the connection
-    conn.close()
-    return "Loaded asset data to SQL table"
+    try:
+        # Save the dataframe to PostgreSQL table
+        df.to_sql(table_name, engine, if_exists='append', index=False)
+        print(f"Successfully loaded data to {table_name}")
+        return f"Loaded asset data to PostgreSQL table {table_name}"
+    except Exception as e:
+        print(f"Error loading data: {e}")
+        raise e
+    finally:
+        engine.dispose()

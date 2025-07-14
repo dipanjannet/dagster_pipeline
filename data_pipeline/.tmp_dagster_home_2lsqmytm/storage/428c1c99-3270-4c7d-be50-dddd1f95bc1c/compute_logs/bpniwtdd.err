@@ -1,0 +1,7 @@
+[32m2025-07-14 11:11:19 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 6334 - LOGS_CAPTURED - Started capturing logs in process (pid: 6334).
+[32m2025-07-14 11:11:19 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 6334 - generate_events_data - STEP_START - Started execution of step "generate_events_data".
+[32m2025-07-14 11:11:20 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 6334 - generate_events_data - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2025-07-14 11:11:20 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - generate_events_data - Writing file at: /workspace/dagster_pipeline/data_pipeline/.tmp_dagster_home_2lsqmytm/storage/generate_events_data using PickledObjectFilesystemIOManager...
+[32m2025-07-14 11:11:22 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 6334 - generate_events_data - ASSET_MATERIALIZATION - Materialized value generate_events_data.
+[32m2025-07-14 11:11:23 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 6334 - generate_events_data - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-07-14 11:11:23 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 6334 - generate_events_data - STEP_SUCCESS - Finished execution of step "generate_events_data" in 3.34s.
