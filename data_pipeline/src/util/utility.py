@@ -1,48 +1,31 @@
 import pandas as pd
 import os
-import sqlite3
+import psycopg2
 
-
-def is_full_load(db_path:str, table:str) -> bool:
-    if not os.path.isfile(db_path):
-        return True
-    
-    conn = sqlite3.connect(db_path)
-    query = f"SELECT name FROM sqlite_master WHERE type = 'table' AND name= '{table}'"
-    
+def is_full_load_pg(conn_params: dict, table: str) -> bool:
+    """
+    Checks if the PostgreSQL table exists. Returns True if not, indicating a full load is needed.
+    conn_params: dict with keys host, dbname, user, password, port
+    """
+    conn = psycopg2.connect(**conn_params)
+    query = f"SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = %s)"
     try:
-        result = pd.read_sql_query(query, conn)
-        return result.empty
+        result = pd.read_sql_query(query, conn, params=(table,))
+        return not result.iloc[0, 0]
     finally:
         conn.close()
-        
-def get_max_timestamp_from_sqlite_table(db_path: str, table: str, column: str) -> pd.Timestamp:
+
+def get_max_timestamp_from_postgres_table(conn_params: dict, table: str, column: str) -> pd.Timestamp:
     """
-    This function returns the maximum timestamp from a SQLite table.
-
-    Args:
-        db_path (str): Database file path
-        table (str): Table name
-        column (str): column name
-
-    Raises:
-        ValueError: Raised when no maximum timestamp is found in the column
-
-    Returns:
-        pd.Timestamp: Returns the maximum timestamp
+    Returns the maximum timestamp from a PostgreSQL table.
     """
-    
-    conn = sqlite3.connect(db_path)
-    query = f"SELECT MAX('{column}') FROM '{table}'"
-    
+    conn = psycopg2.connect(**conn_params)
+    query = f'SELECT MAX("{column}") FROM "{table}"'
     try:
         result = pd.read_sql_query(query, conn)
         max_timestamp = result.iloc[0, 0]
-        
         if pd.isnull(max_timestamp):
             raise ValueError(f"No maximum timestamp found in column '{column}'")
-
         return pd.Timestamp(max_timestamp)
-
     finally:
         conn.close()

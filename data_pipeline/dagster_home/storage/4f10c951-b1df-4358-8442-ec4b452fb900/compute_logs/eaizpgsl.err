@@ -1,0 +1,7 @@
+2025-07-20 11:08:14 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 983 - LOGS_CAPTURED - Started capturing logs in process (pid: 983).
+2025-07-20 11:08:14 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 983 - transform_asset_data - STEP_START - Started execution of step "transform_asset_data".
+2025-07-20 11:08:17 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 983 - transform_asset_data - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-07-20 11:08:18 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - transform_asset_data - Writing file at: /app/dagster_home/storage/transform_asset_data using PickledObjectFilesystemIOManager...
+2025-07-20 11:08:19 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 983 - transform_asset_data - ASSET_MATERIALIZATION - Materialized value transform_asset_data.
+2025-07-20 11:08:19 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 983 - transform_asset_data - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-07-20 11:08:19 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 983 - transform_asset_data - STEP_SUCCESS - Finished execution of step "transform_asset_data" in 4.99s.

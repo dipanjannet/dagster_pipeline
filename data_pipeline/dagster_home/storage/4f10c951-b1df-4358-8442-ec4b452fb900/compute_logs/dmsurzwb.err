@@ -1,0 +1,5 @@
+2025-07-20 11:08:25 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 1281 - LOGS_CAPTURED - Started capturing logs in process (pid: 1281).
+2025-07-20 11:08:25 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 1281 - transform_asset_data_asset_health_check - STEP_START - Started execution of step "transform_asset_data_asset_health_check".
+2025-07-20 11:08:26 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 1281 - transform_asset_data_asset_health_check - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-07-20 11:08:26 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 1281 - transform_asset_data_asset_health_check - ASSET_CHECK_EVALUATION - Asset check 'asset_health_check' on 'transform_asset_data' passed.
+2025-07-20 11:08:26 +0000 - dagster - DEBUG - __ASSET_JOB - 4f10c951-b1df-4358-8442-ec4b452fb900 - 1281 - transform_asset_data_asset_health_check - STEP_SUCCESS - Finished execution of step "transform_asset_data_asset_health_check" in 1.11s.

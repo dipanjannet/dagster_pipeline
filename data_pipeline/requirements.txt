@@ -1,0 +1,5 @@
+dagster
+dagster-webserver
+pandas
+pytest
+psycopg2

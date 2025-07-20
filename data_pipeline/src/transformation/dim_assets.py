@@ -11,7 +11,15 @@ from src.ingestion.dim_assets import generate_asset_data
 )
 def transform_asset_data():
     # PostgreSQL connection parameters
-    engine = create_engine('postgresql://postgres:postgres@db:5432/mydatabase')
+    # engine = create_engine('postgresql://postgres:postgres@postgres:5432/mydatabase')
+    # Create SQLAlchemy engine for Docker Compose PostgreSQL
+    # Connection string: postgresql://<user>:<password>@<host>:<port>/<db>
+    # For Docker Compose, host is usually 'localhost' if connecting from host machine,
+    # or 'dagster_postgres' if connecting from another container.
+    # Here, we use 'localhost' for local development.
+    # Already created above:
+    engine = create_engine('postgresql://postgres:postgres@postgres:5432/mydatabase')
+    
     table_name = 'pz_assets'
     
     df = pd.read_csv("data/asset.csv")

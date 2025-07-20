@@ -1,7 +1,0 @@
-[32m2025-07-14 11:11:34 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 7378 - LOGS_CAPTURED - Started capturing logs in process (pid: 7378).
-[32m2025-07-14 11:11:35 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 7378 - transform_asset_data - STEP_START - Started execution of step "transform_asset_data".
-[32m2025-07-14 11:11:37 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 7378 - transform_asset_data - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
-[32m2025-07-14 11:11:38 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - transform_asset_data - Writing file at: /workspace/dagster_pipeline/data_pipeline/.tmp_dagster_home_2lsqmytm/storage/transform_asset_data using PickledObjectFilesystemIOManager...
-[32m2025-07-14 11:11:39 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 7378 - transform_asset_data - ASSET_MATERIALIZATION - Materialized value transform_asset_data.
-[32m2025-07-14 11:11:39 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 7378 - transform_asset_data - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
-[32m2025-07-14 11:11:39 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 428c1c99-3270-4c7d-be50-dddd1f95bc1c - 7378 - transform_asset_data - STEP_SUCCESS - Finished execution of step "transform_asset_data" in 4.6s.

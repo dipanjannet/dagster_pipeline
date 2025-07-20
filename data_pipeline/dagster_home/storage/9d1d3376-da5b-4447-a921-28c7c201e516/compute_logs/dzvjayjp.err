@@ -1,0 +1,7 @@
+2025-07-19 14:27:56 +0000 - dagster - DEBUG - __ASSET_JOB - 9d1d3376-da5b-4447-a921-28c7c201e516 - 1463 - LOGS_CAPTURED - Started capturing logs in process (pid: 1463).
+2025-07-19 14:27:56 +0000 - dagster - DEBUG - __ASSET_JOB - 9d1d3376-da5b-4447-a921-28c7c201e516 - 1463 - generate_asset_data - STEP_START - Started execution of step "generate_asset_data".
+2025-07-19 14:27:57 +0000 - dagster - DEBUG - __ASSET_JOB - 9d1d3376-da5b-4447-a921-28c7c201e516 - 1463 - generate_asset_data - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-07-19 14:27:58 +0000 - dagster - DEBUG - __ASSET_JOB - 9d1d3376-da5b-4447-a921-28c7c201e516 - generate_asset_data - Writing file at: /app/dagster_home/storage/generate_asset_data using PickledObjectFilesystemIOManager...
+2025-07-19 14:28:03 +0000 - dagster - DEBUG - __ASSET_JOB - 9d1d3376-da5b-4447-a921-28c7c201e516 - 1463 - generate_asset_data - ASSET_MATERIALIZATION - Materialized value generate_asset_data.
+2025-07-19 14:28:03 +0000 - dagster - DEBUG - __ASSET_JOB - 9d1d3376-da5b-4447-a921-28c7c201e516 - 1463 - generate_asset_data - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-07-19 14:28:04 +0000 - dagster - DEBUG - __ASSET_JOB - 9d1d3376-da5b-4447-a921-28c7c201e516 - 1463 - generate_asset_data - STEP_SUCCESS - Finished execution of step "generate_asset_data" in 4.56s.
