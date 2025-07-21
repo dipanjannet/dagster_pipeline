@@ -1,0 +1,7 @@
+2025-07-15 07:53:59 +0000 - dagster - DEBUG - __ASSET_JOB - 981cdf83-0268-4b3d-b6de-e4fd51618e51 - 2566 - LOGS_CAPTURED - Started capturing logs in process (pid: 2566).
+2025-07-15 07:53:59 +0000 - dagster - DEBUG - __ASSET_JOB - 981cdf83-0268-4b3d-b6de-e4fd51618e51 - 2566 - generate_events_data - STEP_START - Started execution of step "generate_events_data".
+2025-07-15 07:53:59 +0000 - dagster - DEBUG - __ASSET_JOB - 981cdf83-0268-4b3d-b6de-e4fd51618e51 - 2566 - generate_events_data - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-07-15 07:54:00 +0000 - dagster - DEBUG - __ASSET_JOB - 981cdf83-0268-4b3d-b6de-e4fd51618e51 - generate_events_data - Writing file at: /app/dagster_home/storage/generate_events_data using PickledObjectFilesystemIOManager...
+2025-07-15 07:54:01 +0000 - dagster - DEBUG - __ASSET_JOB - 981cdf83-0268-4b3d-b6de-e4fd51618e51 - 2566 - generate_events_data - ASSET_MATERIALIZATION - Materialized value generate_events_data.
+2025-07-15 07:54:02 +0000 - dagster - DEBUG - __ASSET_JOB - 981cdf83-0268-4b3d-b6de-e4fd51618e51 - 2566 - generate_events_data - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-07-15 07:54:02 +0000 - dagster - DEBUG - __ASSET_JOB - 981cdf83-0268-4b3d-b6de-e4fd51618e51 - 2566 - generate_events_data - STEP_SUCCESS - Finished execution of step "generate_events_data" in 2.8s.

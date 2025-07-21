@@ -9,3 +9,25 @@ asset_id,asset_name,asset_type,created_on
 8,Textile Manufacturing,Type 8,2025-03-18 00:59:07.446992
 9,Electronics Manufacturing,Type 9,2025-03-18 00:59:07.446992
 10,Mining,Type 10,2025-03-18 00:59:07.446992
+asset_id,asset_name,asset_type,created_on
+1,Oil & Gas Exploration & Production,Type 1,2025-07-14 11:02:42.101294
+2,Automobile Manufacturing,Type 2,2025-07-14 11:02:42.101321
+3,Steel Manufacturing,Type 3,2025-07-14 11:02:42.101323
+4,Cement Manufacturing,Type 4,2025-07-14 11:02:42.101324
+5,Power Generation,Type 5,2025-07-14 11:02:42.101325
+6,Chemical Manufacturing,Type 6,2025-07-14 11:02:42.101327
+7,Food Processing,Type 7,2025-07-14 11:02:42.101328
+8,Textile Manufacturing,Type 8,2025-07-14 11:02:42.101329
+9,Electronics Manufacturing,Type 9,2025-07-14 11:02:42.101330
+10,Mining,Type 10,2025-07-14 11:02:42.101331
+asset_id,asset_name,asset_type,created_on
+1,Oil & Gas Exploration & Production,Type 1,2025-07-14 11:11:19.795016
+2,Automobile Manufacturing,Type 2,2025-07-14 11:11:19.795028
+3,Steel Manufacturing,Type 3,2025-07-14 11:11:19.795031
+4,Cement Manufacturing,Type 4,2025-07-14 11:11:19.795036
+5,Power Generation,Type 5,2025-07-14 11:11:19.795039
+6,Chemical Manufacturing,Type 6,2025-07-14 11:11:19.795040
+7,Food Processing,Type 7,2025-07-14 11:11:19.795042
+8,Textile Manufacturing,Type 8,2025-07-14 11:11:19.795043
+9,Electronics Manufacturing,Type 9,2025-07-14 11:11:19.795045
+10,Mining,Type 10,2025-07-14 11:11:19.795046

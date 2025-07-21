@@ -171,8 +171,7 @@ cython_debug/
 .ruff_cache/
 
 # Temp stuff:
-# .tmp_dagster_home_*
-
+.tmp_dagster_home_0e9wmxdr/
 
 # PyPI configuration file
 .pypirc

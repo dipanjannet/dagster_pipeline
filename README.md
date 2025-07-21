@@ -44,3 +44,21 @@ A curation in a merged Layer between Fact and Dimension Data whcih can be furthe
 # How to Run this Project | Post Activating Venv
 - Navigate to : cd .\data_pipeline\
 - Run : dagster dev
+
+# Purpose of a Curation Layer
+A Curation Layer will be a VIEW or Materialized Table(s) Based on the use Case / Access Control
+
+# Data Health & Governance
+All Data Assets are Monitored through automated checks and access is controlled via RBAC, Row level Access control etc.
+
+# Batch Based processing
+External Sources --> Ingestion --> Dimension Data --> Transformation --> Processed Dimension Data --> Curation
+
+# Event Driven - Continuous Processing
+External Sources --> Ingestion --> Fact Data --> Transformation --> Processed Fact Data --> Curation
+
+# Access Layer
+Curation Layer --> Access Layer --> Analytics, Reporting, Applications
+Curation Layer --> Access Layer --> DuckDB
+Curation Layer --> Access Layer --> Spark
+Curation Layer --> Access Layer --> Trino

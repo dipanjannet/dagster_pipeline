@@ -23,6 +23,8 @@ def generate_asset_data():
 
     # Create the DataFrame
     df = pd.DataFrame(data)
-    df.to_csv('data/asset.csv', mode='a', index=False)
+
+    
+    df.to_csv("data/asset.csv", mode='a', index=False)
 
     return "Data loaded successfully into a CSV file"

@@ -1,0 +1,33 @@
+2025-07-20 04:56:46 +0000 - dagster - DEBUG - __ASSET_JOB - 0c77d034-3619-47d9-ac52-878c9b1d2c08 - 2028 - LOGS_CAPTURED - Started capturing logs in process (pid: 2028).
+2025-07-20 04:56:47 +0000 - dagster - DEBUG - __ASSET_JOB - 0c77d034-3619-47d9-ac52-878c9b1d2c08 - 2028 - transform_asset_data - STEP_START - Started execution of step "transform_asset_data".
+2025-07-20 04:56:57 +0000 - dagster - ERROR - __ASSET_JOB - 0c77d034-3619-47d9-ac52-878c9b1d2c08 - 2028 - transform_asset_data - STEP_FAILURE - Execution of step "transform_asset_data" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "transform_asset_data"::
+
+ModuleNotFoundError: No module named 'psycopg2'
+
+Stack Trace:
+  File "/usr/local/lib/python3.11/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/usr/local/lib/python3.11/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 137, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/app/src/transformation/dim_assets.py", line 14, in transform_asset_data
+    engine = create_engine('postgresql://postgres:postgres@db:5432/mydatabase')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 602, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 696, in import_dbapi
+    import psycopg2
+

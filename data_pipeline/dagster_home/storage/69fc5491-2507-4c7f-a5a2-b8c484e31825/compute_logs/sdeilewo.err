@@ -1,0 +1,35 @@
+2025-07-20 10:39:16 +0000 - dagster - DEBUG - __ASSET_JOB - 69fc5491-2507-4c7f-a5a2-b8c484e31825 - 4438 - LOGS_CAPTURED - Started capturing logs in process (pid: 4438).
+2025-07-20 10:39:17 +0000 - dagster - DEBUG - __ASSET_JOB - 69fc5491-2507-4c7f-a5a2-b8c484e31825 - 4438 - transform_asset_data - STEP_START - Started execution of step "transform_asset_data".
+2025-07-20 10:39:18 +0000 - dagster - ERROR - __ASSET_JOB - 69fc5491-2507-4c7f-a5a2-b8c484e31825 - 4438 - transform_asset_data - STEP_FAILURE - Execution of step "transform_asset_data" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "transform_asset_data"::
+
+sqlalchemy.exc.ObjectNotExecutableError: Not an executable object: 'SELECT 1'
+
+Stack Trace:
+  File "/usr/local/lib/python3.11/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/usr/local/lib/python3.11/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 137, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/app/src/transformation/dim_assets.py", line 25, in transform_asset_data
+    raise conn_err
+  File "/app/src/transformation/dim_assets.py", line 21, in transform_asset_data
+    conn.execute("SELECT 1")
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1413, in execute
+    raise exc.ObjectNotExecutableError(statement) from err
+
+The above exception was caused by the following exception:
+AttributeError: 'str' object has no attribute '_execute_on_connection'
+
+Stack Trace:
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1411, in execute
+    meth = statement._execute_on_connection
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
