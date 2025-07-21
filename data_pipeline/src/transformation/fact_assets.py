@@ -1,5 +1,5 @@
 from src.ingestion.fact_assets import generate_events_data
-from src.util.utility import is_full_load_pg, get_max_timestamp_from_sqlite_table
+from src.util.utility import is_full_load_pg
 import sqlite3
 import dagster as dg
 import pandas as pd
@@ -12,7 +12,7 @@ POSTGRES_CONN_STR = "postgresql://postgres:postgres@postgres:5432/mydatabase"
     group_name="fact_transformation",
     deps=[generate_events_data]
 )
-def transform_events_data(use_postgres=False):
+def transform_events_data():
     database = "mydatabase"
     table_name = 'pz_events'
     incremental_column = 'created_ts'
@@ -24,13 +24,13 @@ def transform_events_data(use_postgres=False):
         "password": "postgres",
         "port": 5432
     }
-    full_load = is_full_load_pg(conn_params)
+    # full_load = is_full_load_pg(conn_params)
     
-    dg.get_dagster_logger().info(f"Full Load: {full_load}")
+    # dg.get_dagster_logger().info(f"Full Load: {full_load}")
     
     df = pd.read_csv("data/events.csv")
-    df['created_ts'] = pd.to_datetime(df['created_ts'], format='mixed')
-    df['hourly_partition'] = df['created_ts'].apply(lambda x: x.strftime('%Y-%m-%d-%H:%M'))
+    # df['created_ts'] = pd.to_datetime(df['created_ts'], format='mixed')
+    # df['hourly_partition'] = df['created_ts'].apply(lambda x: x.strftime('%Y-%m-%d-%H:%M'))
     
     # if not full_load:
     #     max_ts = get_max_timestamp_from_sqlite_table(database, table_name, incremental_column)

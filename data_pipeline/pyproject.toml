@@ -1,7 +1,7 @@
+[tool.dagster]
+module_name = "src.definitions"
+code_location_name = "data_pipeline.src"
 
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
-[tool.dagster]
-module_name = "src.definitions"
-code_location_name = "data_pipeline.src"

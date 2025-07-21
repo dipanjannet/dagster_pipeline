@@ -30,13 +30,16 @@ services:
   dagster:
     build: .
     container_name: dagster_pipeline
+    working_dir: /app
     environment:
       DAGSTER_HOME: /app/dagster_home
     ports:
       - "3001:3000"
     volumes:
       - ./dagster_home:/app/dagster_home
-      - ./data:/workspace/dagster_pipeline/data_pipeline/data
+      - ./data:/app/data  # Mount directly under /app
+      - ./src:/app/src
+      - ./pyproject.toml:/app/pyproject.toml
     depends_on:
 
       - postgres
