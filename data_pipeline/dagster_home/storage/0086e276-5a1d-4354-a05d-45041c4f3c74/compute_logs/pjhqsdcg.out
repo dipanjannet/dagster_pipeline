@@ -1,3 +1,0 @@
-Error loading data: (psycopg2.OperationalError) could not translate host name "db" to address: No address associated with hostname
-
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
